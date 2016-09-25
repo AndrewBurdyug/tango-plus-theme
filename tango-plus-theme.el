@@ -63,9 +63,10 @@ Semantic, and Ansi-Color faces are included.")
       (alum-1 "#eeeeec") (alum-2 "#d3d7cf") (alum-3 "#babdb6")
       (alum-4 "#888a85") (alum-5 "#5f615c") (alum-6 "#2e3436")
       ;; Not in Tango palette; used for better contrast.
-      (white "#ffffff") (black "#000000") (plum-0 "#edc4e2")
+      (white "#ecf0f1") (black "#000000") (plum-0 "#edc4e2")
       (red-0 "#ffe6e6") (cham-0 "#e6ffc2") (cham-4 "#346604")
-      (blue-0 "#8cc4ff") (orange-4 "#b35000"))
+      (blue-0 "#8cc4ff") (orange-4 "#b35000") (green-0 "#558b2f")
+      (red-4 "#96281B"))
 
   (custom-theme-set-faces
    'tango-plus
@@ -76,8 +77,8 @@ Semantic, and Ansi-Color faces are included.")
    `(highlight                      ((,class (:background ,alum-1))))
    `(sentence-highlight-face        ((,class (:background ,alum-1))))
    `(show-paren-match               ((,class (:background ,alum-1))))
-   `(region                         ((,class (:background ,butter-1))))
-   `(secondary-selection            ((,class (:background ,blue-0))))
+   `(region                         ((,class (:background ,orange-3))))
+   `(secondary-selection            ((,class (:background ,blue-0 :weight bold))))
    `(isearch                        ((,class (:foreground ,white :background ,cham-1))))
    `(lazy-highlight                 ((,class (:background ,cham-0))))
    `(evil-ex-substitute-matches     ((,class (:background ,red-0 :strike-through ,red-1))))
@@ -100,15 +101,15 @@ Semantic, and Ansi-Color faces are included.")
    ;; Font lock faces
    `(font-lock-builtin-face         ((,class (:foreground ,plum-2))))
    `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
-   `(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
-   `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
-   `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
+   `(font-lock-constant-face        ((,class (:weight bold :foreground ,green-0))))
+   `(font-lock-function-name-face   ((,class (:foreground ,red-3 :weight bold))))
+   `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight bold))))
    `(font-lock-string-face          ((,class (:foreground ,choc-3 :slant italic))))
-   `(font-lock-type-face            ((,class (:foreground ,blue-3))))
-   `(font-lock-variable-name-face   ((,class (:foreground ,red-3))))
+   `(font-lock-type-face            ((,class (:foreground ,blue-3 :weight bold))))
+   `(font-lock-variable-name-face   ((,class (:foreground ,red-4))))
    ;; Button and link faces
    `(link                           ((,class (:underline t :foreground ,blue-3))))
-   `(link-visited                   ((,class (:underline t :foreground ,blue-2))))
+   `(link-visited                   ((,class (:underline t :foreground ,blue-2 :weight bold))))
    ;; Gnus faces
    `(gnus-group-news-1              ((,class (:weight bold :foreground ,plum-3))))
    `(gnus-group-news-1-low          ((,class (:foreground ,plum-3))))
@@ -218,7 +219,7 @@ Semantic, and Ansi-Color faces are included.")
    `(semantic-decoration-on-unparsed-includes
                                     ((,class (:underline  ,orange-3))))
    `(semantic-tag-boundary-face
-                                    ((,class (:overline   ,blue-1))))
+                                    ((,class (:overline   ,blue-1 :weight bold))))
    `(semantic-unmatched-syntax-face
                                     ((,class (:underline  ,red-1)))))
 
